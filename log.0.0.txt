@@ -1,0 +1,48 @@
+мая 25, 2023 11:58:33 AM homework2.BubbleMethod arrayBuble
+INFO: Мы запустили BubbleMethod
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Размер массива 5
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Ввод 72
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Ввод 77
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Ввод 7
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Ввод 42
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Ввод 35
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 7 77
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 42 77
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 35 77
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 7 72
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 42 72
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 35 72
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod BubleSort
+INFO:  Метод пузырька 35 42
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Вывод 7
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Вывод 35
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Вывод 42
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Вывод 72
+мая 25, 2023 11:58:39 AM homework2.BubbleMethod arrayBuble
+INFO:  Вывод 77
+мая 25, 2023 12:03:46 PM homework2.CalculLog calcul
+INFO: Мы запустили Калькулятор
+мая 25, 2023 12:03:51 PM homework2.CalculLog calcul
+INFO:  Первое число 5
+мая 25, 2023 12:03:52 PM homework2.CalculLog calcul
+INFO:  Второе число 5
+мая 25, 2023 12:03:55 PM homework2.CalculLog calcul
+INFO:  Вид операции +
+мая 25, 2023 12:03:55 PM homework2.CalculLog calcul
+INFO:  Сумма 10
