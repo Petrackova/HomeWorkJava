@@ -15,7 +15,7 @@ public class MinMaxArray {
         int arrayMax = in.nextInt();
         Random random = new Random();
         for (int i = 0; i < sizeArray; i++) {
-            array.add(random.nextInt(arrayMax+1));
+            array.add(random.nextInt(arrayMax + 1));
         }
         System.out.println("Список имеет вид: ");
         System.out.println(array);
@@ -25,8 +25,22 @@ public class MinMaxArray {
         for (int i = 0; i < array.size(); i++) {
             summaArray = summaArray + array.get(i);
         }
-        System.out.println("Среднее значение в списке: " + summaArray/sizeArray);
+        System.out.println("Среднее значение в списке: " + summaArray / sizeArray);
         array.removeIf(i -> i % 2 == 0);
         System.out.println(array);
+        ArrayList<Integer> evenArray = new ArrayList<>();
+        for (int i = 0; i < array.size(); i++) {
+            {
+                evenArray.add(array.get(i));
+            }
+        }
+        System.out.println(evenArray);
+        System.out.println("Максимальный элемент в списке: " + Collections.max(evenArray));
+        System.out.println("Минимальный элемент в списке: " + Collections.min(evenArray));
+        int summaEvenArray = 0;
+        for (int i = 0; i < evenArray.size(); i++) {
+            summaEvenArray = summaEvenArray + evenArray.get(i);
+        }
+        System.out.println("Среднее значение в списке: " + summaEvenArray / evenArray.size());
     }
 }
