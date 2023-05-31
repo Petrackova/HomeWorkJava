@@ -4,6 +4,8 @@ import HomeWork1.Task3;
 import HomeWork1.Task4;
 import homework2.*;
 import homework3.MinMaxArray;
+import homework4.QueueListMethod;
+import homework4.ReverseLinkedList;
 
 public class Main {
 
@@ -31,7 +33,19 @@ public class Main {
  //       task4.calcul();
 
   //      Домашнее задание 3
-        MinMaxArray task1 = new MinMaxArray();
-        task1.ArrayFunction();
+ //       MinMaxArray task1 = new MinMaxArray();
+ //       task1.ArrayFunction();
+
+ //       Домашнее задание 4
+        System.out.println("Задание 1");
+        ReverseLinkedList task1 = new ReverseLinkedList();
+        task1.reversArr();
+        System.out.println("Задание 2");
+        QueueListMethod task2 = new QueueListMethod();
+        task2.scanArr();
+        task2.printArr();
+        System.out.printf("\nВозращает первый элемент без удаления " + task2.first());
+        System.out.printf("\nВозращает первый элемент с удалением " + task2.dequeue() + "\n");
+        task2.printArr();
     }
 }
