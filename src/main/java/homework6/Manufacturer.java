@@ -1,5 +1,7 @@
 package homework6;
 
+import java.util.Random;
+
 public enum Manufacturer {
     ACER,
     APPLE,
@@ -11,10 +13,10 @@ public enum Manufacturer {
     MSI,
     HP;
 
-/**    public static Manufacturer generateRandomManufacture() {
+   public static Manufacturer generateRandomManufacture() {
         Manufacturer[] values = Manufacturer.values();
         int length = values.length;
         int randIndex = new Random().nextInt(length);
         return values[randIndex];
-    }**/
+    }
 }

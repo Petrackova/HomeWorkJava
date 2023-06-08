@@ -1,5 +1,5 @@
 package homework6;
-
+import java.util.Random;
 public enum Color {
 
     BLACK,
@@ -12,10 +12,10 @@ public enum Color {
     PINK,
     SILVER;
 
-  /**  public static Color generateRandomColor() {
+  public static Color generateRandomColor() {
         Color[] values = Color.values();
         int length = values.length;
         int randIndex = new Random().nextInt(length);
         return values[randIndex];
-    }**/
+    }
 }

@@ -97,17 +97,14 @@ public class Main {
          “Введите цифру, соответствующую необходимому критерию:
          1 - цвет
          2 - бренд**/
-        Set<Laptop> laptops = new HashSet<>();
-        laptops.add(new Laptop(Color.RED,Manufacturer.ACER));
-        laptops.add(new Laptop(Color.GREEN,Manufacturer.MSI));
-        laptops.add(new Laptop(Color.BLACK,Manufacturer.APPLE));
-        laptops.add(new Laptop(Color.WHITE,Manufacturer.APPLE));
-        laptops.add(new Laptop(Color.ORANGE,Manufacturer.MSI));
-        laptops.add(new Laptop(Color.SILVER,Manufacturer.SAMSUNG));
-        laptops.add(new Laptop(Color.BLUE,Manufacturer.HONOR));
-        laptops.add(new Laptop(Color.PINK,Manufacturer.HP));
-        laptops.add(new Laptop(Color.RED,Manufacturer.HUAWEI));
         Scanner in = new Scanner(System.in);
+        Set<Laptop> laptops = new HashSet<>();
+        System.out.println("Сегодня завоз новой техники. Выьерите количество новых товаров");
+        int pullLaptop = in.nextInt();
+        for (int i = 0; i < pullLaptop ; i++) {
+            laptops.add(new Laptop(Color.generateRandomColor(),Manufacturer.generateRandomManufacture()));
+        }
+        System.out.println(laptops);
         System.out.println("Выберите пункт:");
         System.out.println("1 - Вывод всего каталога");
         System.out.println("2 - Фильтрация по цветам");
