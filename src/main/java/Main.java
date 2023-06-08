@@ -1,48 +1,42 @@
-import HomeWork1.Task1;
-import HomeWork1.Task2;
-import HomeWork1.Task3;
-import HomeWork1.Task4;
-import homework2.*;
-import homework3.MinMaxArray;
-import homework4.QueueListMethod;
-import homework4.ReverseLinkedList;
-import homework5.PhonePerson;
+import homework6.Color;
+import homework6.FilterLaptop;
+import homework6.Laptop;
+import homework6.Manufacturer;
 
-import java.util.*;
-
-import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.toMap;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) {
- //       Домашнее задание 1
+        //       Домашнее задание 1
 
- //       Task1 task1 = new Task1();
- //       task1.triangle();
- //       Task2 task2 = new Task2();
- //       task2.numbers();
- //       Task3 task3 = new Task3();
- //       task3.calcul();
- //       Task4 task4 = new Task4();
- //       task4.func();
+        //       Task1 task1 = new Task1();
+        //       task1.triangle();
+        //       Task2 task2 = new Task2();
+        //       task2.numbers();
+        //       Task3 task3 = new Task3();
+        //       task3.calcul();
+        //       Task4 task4 = new Task4();
+        //       task4.func();
 
- //       Домашнее задание 2
+        //       Домашнее задание 2
 
- //       SqlRequest task1 = new SqlRequest();
- //       task1.StringRequest();
- //       BubbleMethod task2 = new BubbleMethod();
- //       task2.arrayBuble();
- //       JsonRequest task3 = new JsonRequest();
- //       task3.StringRequest();
- //       CalculLog task4 = new CalculLog();
- //       task4.calcul();
+        //       SqlRequest task1 = new SqlRequest();
+        //       task1.StringRequest();
+        //       BubbleMethod task2 = new BubbleMethod();
+        //       task2.arrayBuble();
+        //       JsonRequest task3 = new JsonRequest();
+        //       task3.StringRequest();
+        //       CalculLog task4 = new CalculLog();
+        //       task4.calcul();
 
-  //      Домашнее задание 3
- //       MinMaxArray task1 = new MinMaxArray();
- //       task1.ArrayFunction();
+        //      Домашнее задание 3
+        //       MinMaxArray task1 = new MinMaxArray();
+        //       task1.ArrayFunction();
 
- //       Домашнее задание 4
+        //       Домашнее задание 4
         /*System.out.println("Задание 1");
         ReverseLinkedList task1 = new ReverseLinkedList();
         task1.reversArr();
@@ -55,10 +49,10 @@ public class Main {
         task2.printArr();*/
 
 //         Домашняя работа 5
-        /*Реализуйте структуру телефонной книги с помощью HashMap.
+        /*        *//*Реализуйте структуру телефонной книги с помощью HashMap.
         Программа также должна учитывать, что во входной структуре будут повторяющиеся имена с разными телефонами,
         их необходимо считать, как одного человека с разными телефонами.
-        Вывод должен быть отсортирован по убыванию числа телефонов.*/
+        Вывод должен быть отсортирован по убыванию числа телефонов.*//*
 
         List<PhonePerson> phonePeople = Arrays.asList(
                 new PhonePerson("Ivanov","88005553535"),
@@ -92,6 +86,63 @@ public class Main {
         System.out.println("Обратный порядок телефонной книжки");
         for (String key: alKeys) {
             System.out.println(key + "=" +phoneBook.get(key));
+        }*/
+
+//         Домашняя работа 6
+        /**Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы.
+         *  Реализовать в java.
+         Создать множество ноутбуков (Set).
+         Написать метод, который будет запрашивать у пользователя критерий (или критерии) фильтрации
+         и выведет ноутбуки, отвечающие фильтру. Критерии фильтрации можно хранить в Map или в Сет. Например:
+         “Введите цифру, соответствующую необходимому критерию:
+         1 - цвет
+         2 - бренд**/
+        Set<Laptop> laptops = new HashSet<>();
+        laptops.add(new Laptop(Color.RED,Manufacturer.ACER));
+        laptops.add(new Laptop(Color.GREEN,Manufacturer.MSI));
+        laptops.add(new Laptop(Color.BLACK,Manufacturer.APPLE));
+        laptops.add(new Laptop(Color.WHITE,Manufacturer.APPLE));
+        laptops.add(new Laptop(Color.ORANGE,Manufacturer.MSI));
+        laptops.add(new Laptop(Color.SILVER,Manufacturer.SAMSUNG));
+        laptops.add(new Laptop(Color.BLUE,Manufacturer.HONOR));
+        laptops.add(new Laptop(Color.PINK,Manufacturer.HP));
+        laptops.add(new Laptop(Color.RED,Manufacturer.HUAWEI));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Выберите пункт:");
+        System.out.println("1 - Вывод всего каталога");
+        System.out.println("2 - Фильтрация по цветам");
+        System.out.println("3 - Фильтрация по производителю");
+        int parametrFilter = in.nextInt();
+        in.nextLine();
+        switch (parametrFilter) {
+            case 1:
+                FilterLaptop.fullLaptop(laptops);
+                break;
+            case 2:
+                System.out.println("Введите цвет для фильтрации");
+                String parametrColor = in.nextLine();
+                laptops = FilterLaptop.filterColor(laptops,parametrColor);
+                break;
+            case 3:
+                System.out.println("Введите производителя фильтрации");
+                String parametrManufactures = in.nextLine();
+                laptops = FilterLaptop.filterManufacturer(laptops,parametrManufactures);
+                break;
+            default:
+                System.out.println("Такого пунка нет");
+                break;
         }
+        System.out.println("Результаты фильтрации:");
+        if (laptops.isEmpty()) {
+            System.out.println("Не найдено");
+        }
+        else {
+            for (Laptop lp:laptops) {
+                System.out.println(lp);
+            }
+        }
+
+
+
     }
 }
